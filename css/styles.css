@@ -6,89 +6,116 @@
   box-sizing: border-box;
 }
 
-/* --------------INDEX.HTML / HEADER -------------- */
+/* --------------ALL.HTML / NAVBAR -------------- */
+nav {
+  background: #483d3f;
+  height: 80px;
+  width: 100%;
+}
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* position: sticky; */
-  height: 90px;
-  padding: 15px;
-  background-image: linear-gradient(to bottom, #483d3f73, transparent);
+.enlace {
+  position: absolute;
+  padding: 10px 20px;
 }
 
 .logo {
   width: auto;
-  height: 70px;
-  cursor: pointer;
+  height: 60px;
 }
 
-.logo-receta {
-  width: 45px;
-  height: auto;
-  transition: all 0.3s;
+nav ul {
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 0px;
 }
 
-.logo-receta:hover {
-  transform: scale(1.2);
-}
-
-.header .nav-links {
-  list-style: none;
-}
-
-.header .nav-links li {
+nav ul li {
   display: inline-block;
-  padding: 0 20px;
-  font-family: "Heebo";
+  line-height: 80px;
+  margin: 0 5px;
 }
 
-.header .nav-links li:hover {
-  transform: scale(1.1);
-}
-
-.header .nav-links a {
-  font-size: 700;
+nav ul li a {
   color: #058ed9;
-  text-decoration: none;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
 }
 
-.header .nav-links li a:hover {
-  color: #f4ebd9;
+li a.active,
+li a:hover {
+  background: #77685d;
+  transition: 0.5s;
 }
 
-/*menu*/
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
 
-.taste {
-  background: url("../images/taste.jpg") center no-repeat;
+#check {
+  display: none;
+}
+
+/* section {
+  background: url(fondo.jpg) no-repeat;
   background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 80px);
+} */
+
+/* -------------- INDEX.HTML / MEDIA QUERY (NAV)  -------------- */
+
+@media (max-width: 952px) {
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
 }
 
-.bt {
-  min-height: 65vh;
-  display: flex;
-  align-items: center;
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #483d3f;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  li a:hover,
+  li a.active {
+    background: none;
+    color: #058ed9;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
-
-/*img*/
-
-.image-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
-}
-
-.disco .res-des {
-  padding-top: 3rem;
-  margin-bottom: 0;
-}
-
-.pb {
-  background: url("../images/mesa.jpg") center no-repeat;
-  background-size: cover;
-}
-
 /* -------------- INDEX.HTML / BODY -------------- */
 
 body {
@@ -111,6 +138,7 @@ a {
 
 p {
   font-size: 1.6rem;
+  padding: 1rem;
 }
 
 .container {
@@ -132,7 +160,7 @@ p {
 
 .h2-sub {
   font-size: 3rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Heebo semibold", sans-serif;
   color: #058ed9;
   font-weight: 600;
   line-height: 0.4;
@@ -146,20 +174,21 @@ p {
 .head {
   color: #ffffff;
   font-size: 3.7rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Heebo";
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
 }
 
 .circle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #f4ebd9;
   margin: 0 1.6rem;
 }
 
 .he-des h5 {
   color: #ffffff;
+  font-family: "Heebo semibold", sans-serif;
   font-size: 1.4rem;
   font-weight: 100;
   text-transform: uppercase;
@@ -182,6 +211,7 @@ p {
   color: #f4ebd9;
   border-radius: 0.4rem;
 }
+
 .cta-btn:hover,
 .cta-btn:focus {
   color: #f4ebd9;
@@ -201,7 +231,7 @@ p {
 
 .global .circle {
   color: #058ed9;
-  margin: 2.4rem 0;
+  margin: 0.5rem 0;
 }
 
 .hea-dark {
@@ -241,123 +271,7 @@ p {
   margin-bottom: 0;
 }
 
-/* -------------- INDEX.HTML / CARD  -------------- */
-
-.sec-card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
-}
-
-.card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-}
-
-.card .card_landing {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 10px #000;
-  background: linear-gradient(transparent 80%, #000), var(--i);
-  background-position: center;
-  background-size: cover;
-  z-index: 100;
-}
-
-.card .card_landing h6 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 25px;
-  color: #fff;
-}
-
-.card .card_info {
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  margin: auto;
-  padding: 15px;
-  background: #fff;
-  z-index: 90;
-  box-shadow: 0 5px 10px #000;
-  transition: 0.5s;
-}
-
-.card:hover .card_info {
-  left: 100%;
-}
-
-.card_info .head {
-  padding: 5px 0;
-  border-bottom: solid 1px #058ed9;
-}
-
-.card_info .head .title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #058ed9;
-}
-
-.card_info .head .description {
-  display: flex;
-  gap: 10px;
-}
-
-.card_info .head .description .item {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.card_info .head .description .item i {
-  color: #058ed9;
-  font-size: 15px;
-}
-
-.card_info .head .description .item p {
-  font-size: 10px;
-  color: #058ed9;
-  position: relative;
-  bottom: 5px;
-}
-
-.card_info .content {
-  margin-top: 15px;
-}
-
-.card_info .content .list {
-  padding: 10px 15px;
-}
-
-.card_info .content .list li {
-  font-size: 14px;
-  margin-bottom: 2 px;
-}
-
-.card_info .action .btn {
-  padding: 10px;
-  color: #fff;
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  background: #058ed9;
-  display: block;
-  margin-top: 10px;
-}
-
-.card .btn:hover {
-  color: #f4ebd9;
-  background-color: #483d3f;
-}
-
-/* -------------- INDEX.HTML / FOOTER -------------- */
+/* -------------- ALL.HTML / FOOTER -------------- */
 
 footer {
   position: absolute;
@@ -428,6 +342,259 @@ footer {
 
 /* -------------- MI-PERFIL.HTML / MAIN -------------- */
 
+.profile {
+  text-align: center;
+  height: 300px;
+  padding: 12px;
+  background-image: url("../img/portada-comida.jpg");
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.user-name {
+  font-size: 32px;
+  font-family: "Heboo";
+  margin-top: 14px;
+  color: white;
+}
+
+.social-perfil {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.social-perfil li {
+  display: inline-block;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #058ed9;
+}
+
+a:hover {
+  color: #77685d;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+}
+
+.gmail {
+  background-image: url("../img/gmail-perfil.png");
+}
+
+.twitter {
+  background-image: url("../img/twitter-perfil.png");
+}
+
+.instagram {
+  background-image: url("../img/instagram-perfil.png");
+}
+
+.about {
+  padding: 10px;
+}
+
+.about h3 {
+  color: black;
+  font-size: 18px;
+  text-align: left;
+}
+
+.about p {
+  color: #058ed9;
+  font-size: 14px;
+}
+
+/* -------------- MI-PERFIL.HTML / GALERIA  -------------- */
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+
+.title-perfil {
+  font-family: "Heebo semibold";
+  color: #058ed9;
+  font-weight: 600;
+  line-height: 0.4;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+
+.gallery__item {
+  position: relative;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.gallery__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+
+.gallery__item:nth-child(5) {
+  grid-row-start: span 2;
+}
+
+.gallery__item:nth-child(9) {
+  grid-column-start: span 2;
+}
+
+/* -------------- MI-PERFIL.HTML / GALERIA-RESPONSIVE -------------- */
+
+@media screen and (min-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__item:nth-child(3) {
+    grid-column-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-column-start: span 3;
+  }
+  .gallery__item:nth-child(5) {
+    grid-row-start: span 3;
+  }
+  .gallery__item:nth-child(9) {
+    grid-column-start: span 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+  }
+  .gallery__item:nth-child(1) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-column-start: span 3;
+    grid-row-start: span 3;
+  }
+}
+/* -------------- RECETAS.HTML / MAIN -------------- */
+
+.site {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px black;
+}
+
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .front h3 {
+  position: absolute;
+  font-size: 23px;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: #058ed9;
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0, 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+/* -------------- CONSEJOS.HTML / MAIN -------------- */
+
 /* -------------- CONTACTO.HTML / MAIN -------------- */
 
 section .contact {
@@ -437,13 +604,13 @@ section .contact {
 
 .form {
   width: 340px;
-  height: 420px;
+  height: 540px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 0 40px -10px #000;
-  margin: calc(50vw 220px) auto;
+  margin: calc(10vw - 120px) auto;
   padding: 20px 30px;
-  max-width: calc(100vw -40px);
+  max-width: calc(100vw - 40px);
   box-sizing: border-box;
   font-family: "Heebo";
   position: relative;
@@ -468,6 +635,7 @@ input {
   border: 0;
   font-family: "Heebo";
   border-bottom: 2px solid grey;
+  transform: all 0.3s;
 }
 
 input:focus {
@@ -491,6 +659,7 @@ button {
   background: 0;
   color: black;
   cursor: pointer;
+  transform: all 0.3s;
 }
 
 button:hover {
@@ -498,19 +667,36 @@ button:hover {
   color: white;
 }
 
+.test {
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  background: black;
+  color: white;
+  width: 320px;
+  padding: 16px 4px 16px 0px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+}
+
 span {
   margin: 0 5px 0 15px;
 }
 
-.phone {
+.fa fa-phone {
   float: right;
   padding: 8px 12px;
   margin: 20px 0 0;
 }
 
-/* -------------- MEDIA QUERY -------------- */
+/* -------------- MEDIA QUERY (index)-------------- */
 
 @media screen and (min-width: 900px) {
+  section {
+    padding: 0.9rem;
+  }
+
   .h2-sub {
     font-size: 3rem;
   }
@@ -536,5 +722,3 @@ span {
     padding-right: 7rem;
   }
 }
-
-/* agregar espacio en ultima seccion foto-h2 */
