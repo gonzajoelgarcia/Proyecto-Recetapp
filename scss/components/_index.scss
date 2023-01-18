@@ -1,0 +1,136 @@
+/* ----INDEX.HTML / MAIN ----- */
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3.9rem 0;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.hero {
+  width: 100%;
+  height: 70vh;
+  background: url("../img/hero.jpg") center no-repeat;
+  background-size: cover;
+  @extend %flex;
+  .container {
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+  }
+  h2-sub {
+    font-size: 3rem;
+    font-family: "Heebo semibold", sans-serif;
+    color: rgb(43, 112, 153);
+    font-weight: 600;
+    line-height: 0.4;
+    .fil {
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+  }
+  .head {
+    color: rgb(96 126 145);
+    font-size: 3.7rem;
+    font-family: "Heebo";
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+  }
+  .circle {
+    font-size: 1rem;
+    color: $celeste;
+    margin: 0 1.6rem;
+  }
+  .he-des h5 {
+    color: #b5b5b5;
+    font-family: "Heebo semibold", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+  }
+  .btn {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+  }
+  .cta-btn {
+    font-size: 1.1rem;
+    background-color: $celeste;
+    padding: 1.5rem 3rem;
+    color: $crema;
+    border-radius: 0.4rem;
+    &:hover,
+    &:focus {
+      color: $crema;
+      background-color: $marron;
+    }
+  }
+}
+
+/* --- INDEX.HTML / VER-RECETA  ---- */
+
+.global {
+  text-align: center;
+  margin-top: 3.9rem;
+  color: $celeste;
+}
+.dis-sto .global {
+  margin-top: 6.9rem;
+}
+.global .circle {
+  color: $celeste;
+  margin: 0.5rem 0;
+}
+.hea-dark {
+  color: $cafe;
+  letter-spacing: 0.7rem;
+  margin-right: -0.7rem;
+}
+.global .h2-sub {
+  letter-spacing: -1px;
+  line-height: 0.42;
+}
+.res-info {
+  text-align: center;
+}
+.res-des {
+  margin-bottom: 3rem;
+}
+.res-des p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+/* ---- INDEX.HTML / CREAPERFIL  ---- */
+
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+.receta .res-des {
+  padding-top: 3rem;
+  margin-bottom: 0;
+}

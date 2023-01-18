@@ -1,0 +1,109 @@
+/* ---- MI-PERFIL.HTML / MAIN ----- */
+
+.profile {
+  text-align: center;
+  height: 300px;
+  padding: 12px;
+  background-image: url("../img/portada-comida.jpg");
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+  .user-name {
+    font-size: 32px;
+    font-family: "Heboo";
+    margin-top: 14px;
+    color: white;
+  }
+}
+.social-perfil {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.social-perfil li {
+  display: inline-block;
+  margin: 5px;
+}
+a {
+  text-decoration: none;
+  color: $celeste;
+  a:hover {
+    color: $cafe;
+  }
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+}
+.gmail {
+  background-image: url("../img/gmail-perfil.png");
+}
+.twitter {
+  background-image: url("../img/twitter-perfil.png");
+}
+.instagram {
+  background-image: url("../img/instagram-perfil.png");
+}
+.about {
+  padding: 10px;
+  .about h3 {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    .about p {
+      color: $celeste;
+      font-size: 14px;
+    }
+  }
+}
+
+/* ---- MI-PERFIL.HTML / GALERIA  ---- */
+
+.title-perfil {
+  font-family: "Heebo semibold";
+  color: $celeste;
+  font-weight: 600;
+  line-height: 0.4;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+.gallery__item {
+  position: relative;
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery__title {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.gallery__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+.gallery__item:nth-child(5) {
+  grid-row-start: span 2;
+}
+.gallery__item:nth-child(9) {
+  grid-column-start: span 2;
+}

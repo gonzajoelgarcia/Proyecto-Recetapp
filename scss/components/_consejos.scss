@@ -1,0 +1,12 @@
+/* ----- CONSEJOS.HTML / MAIN ----- */
+
+.carousel-item {
+  max-height: 40rem;
+}
+.card-site {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.card-text {
+  font-size: 18px;
+}

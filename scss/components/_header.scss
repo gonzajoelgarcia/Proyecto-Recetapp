@@ -1,0 +1,48 @@
+/* ----- HEADER  ---- */
+
+nav {
+  background: $marron;
+  height: 80px;
+  width: 100%;
+  z-index: 999 !important;
+  .enlace {
+    position: absolute;
+    padding: 10px 20px;
+  }
+  .logo {
+    width: auto;
+    height: 60px;
+  }
+  ul {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+  ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  ul li a {
+    color: $celeste;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  li a.active,
+  li a:hover {
+    background: $cafe;
+    transition: 0.5s;
+  }
+  #check {
+    display: none;
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+  }
+}
