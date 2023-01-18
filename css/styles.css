@@ -98,21 +98,23 @@ p {
 .hero h2-sub {
   font-size: 3rem;
   font-family: "Heebo semibold", sans-serif;
-  color: rgb(43, 112, 153);
+  color: #f4ebd9;
   font-weight: 600;
   line-height: 0.4;
+  text-shadow: -2px -2px 1px #000;
 }
 .hero h2-sub .fil {
   text-transform: uppercase;
   font-size: 3rem;
 }
 .hero .head {
-  color: rgb(96, 126, 145);
+  color: #058ed9;
   font-size: 3.7rem;
   font-family: "Heebo";
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
+  text-shadow: -2px -2px 1px #000;
 }
 .hero .circle {
   font-size: 1rem;
@@ -120,7 +122,7 @@ p {
   margin: 0 1.6rem;
 }
 .hero .he-des h5 {
-  color: #b5b5b5;
+  color: #f4ebd9;
   font-family: "Heebo semibold", sans-serif;
   font-size: 1.4rem;
   font-weight: 100;
@@ -128,6 +130,7 @@ p {
   margin-bottom: 1.2rem;
   letter-spacing: 3px;
   margin-right: -3px;
+  text-shadow: -2px -2px 1px #000;
 }
 .hero .btn {
   display: inline-block;
@@ -660,7 +663,8 @@ footer .footer-bottom span {
   }
   .h2-sub {
     font-size: 3rem;
-    color: rgb(43, 112, 153);
+    color: #f4ebd9;
+    text-shadow: -2px -2px 1px #000;
   }
   .fil {
     font-size: 3rem;

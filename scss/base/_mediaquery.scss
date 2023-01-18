@@ -54,7 +54,8 @@
 
   .h2-sub {
     font-size: 3rem;
-    color: rgb(43, 112, 153);
+    color: $crema;
+    text-shadow: -2px -2px 1px #000;
   }
 
   .fil {
