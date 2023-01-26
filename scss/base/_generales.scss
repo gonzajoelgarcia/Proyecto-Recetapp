@@ -5,3 +5,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #1a7667;
+  padding: 1.5rem 3rem;
+  color: #f4ebd9;
+  border-radius: 0.4rem;
+  &:hover,
+  &:focus {
+    color: #f4ebd9;
+    background-color: #483d3f;
+  }
+}

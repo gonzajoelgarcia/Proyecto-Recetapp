@@ -4,7 +4,6 @@ nav {
   background: $marron;
   height: 80px;
   width: 100%;
-  z-index: 999 !important;
   .enlace {
     position: absolute;
     padding: 10px 20px;
@@ -24,15 +23,18 @@ nav {
     margin: 0 5px;
   }
   ul li a {
-    color: $celeste;
+    font-family: "Heebo";
+    color: $crema;
     font-size: 18px;
+    font-weight: 700;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
   }
   li a.active,
   li a:hover {
-    background: $cafe;
+    background: #96897b;
+    opacity: 85%;
     transition: 0.5s;
   }
   #check {
@@ -45,4 +47,7 @@ nav {
     line-height: 80px;
     margin-right: 40px;
   }
+}
+.fa-bars {
+  display: none;
 }

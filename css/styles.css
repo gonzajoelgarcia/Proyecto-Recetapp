@@ -5,6 +5,25 @@
   box-sizing: border-box;
 }
 
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+}
+
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #1a7667;
+  padding: 1.5rem 3rem;
+  color: #f4ebd9;
+  border-radius: 0.4rem;
+}
+.cta-btn:hover, .cta-btn:focus {
+  color: #f4ebd9;
+  background-color: #483d3f;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -16,7 +35,6 @@ nav {
   background: #483d3f;
   height: 80px;
   width: 100%;
-  z-index: 999 !important;
 }
 nav .enlace {
   position: absolute;
@@ -37,15 +55,18 @@ nav ul li {
   margin: 0 5px;
 }
 nav ul li a {
-  color: #058ed9;
+  font-family: "Heebo";
+  color: #f4ebd9;
   font-size: 18px;
+  font-weight: 700;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
 }
 nav li a.active,
 nav li a:hover {
-  background: #77685d;
+  background: #96897b;
+  opacity: 85%;
   transition: 0.5s;
 }
 nav #check {
@@ -57,6 +78,10 @@ nav .checkbtn {
   float: right;
   line-height: 80px;
   margin-right: 40px;
+}
+
+.fa-bars {
+  display: none;
 }
 
 /* ----INDEX.HTML / MAIN ----- */
@@ -108,17 +133,17 @@ p {
   font-size: 3rem;
 }
 .hero .head {
-  color: #058ed9;
+  color: #1a7667;
   font-size: 3.7rem;
   font-family: "Heebo";
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5rem;
-  text-shadow: -2px -2px 1px #000;
+  text-shadow: -2px -2px 1px #fff;
 }
 .hero .circle {
   font-size: 1rem;
-  color: #058ed9;
+  color: #1a7667;
   margin: 0 1.6rem;
 }
 .hero .he-des h5 {
@@ -140,7 +165,7 @@ p {
 }
 .hero .cta-btn {
   font-size: 1.1rem;
-  background-color: #058ed9;
+  background-color: #1a7667;
   padding: 1.5rem 3rem;
   color: #f4ebd9;
   border-radius: 0.4rem;
@@ -154,7 +179,7 @@ p {
 .global {
   text-align: center;
   margin-top: 3.9rem;
-  color: #058ed9;
+  color: #1a7667;
 }
 
 .dis-sto .global {
@@ -162,7 +187,7 @@ p {
 }
 
 .global .circle {
-  color: #058ed9;
+  color: #1a7667;
   margin: 0.5rem 0;
 }
 
@@ -233,7 +258,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #058ed9;
+  color: #1a7667;
 }
 a a:hover {
   color: #77685d;
@@ -267,14 +292,14 @@ a a:hover {
   text-align: left;
 }
 .about .about h3 .about p {
-  color: #058ed9;
+  color: #1a7667;
   font-size: 14px;
 }
 
 /* ---- MI-PERFIL.HTML / GALERIA  ---- */
 .title-perfil {
   font-family: "Heebo semibold";
-  color: #058ed9;
+  color: #1a7667;
   font-weight: 600;
   line-height: 0.4;
   margin-block-start: 0.83em;
@@ -375,7 +400,7 @@ a a:hover {
 
 .card .back {
   transform: perspective(600px) rotateY(180deg);
-  background: #058ed9;
+  background: #1a7667;
   padding: 15px;
   color: #f3f3f3;
   display: flex;
@@ -453,7 +478,7 @@ a a:hover {
 }
 
 #contact .container .contact-content .content-info {
-  background-color: #058ed9;
+  background-color: #1a7667;
   color: #483d3f;
   padding: 1.75rem 1rem;
   position: relative;
@@ -466,7 +491,7 @@ a a:hover {
   height: 0;
   border-left: 1rem solid transparent;
   border-right: 1rem solid transparent;
-  border-top: 1.75rem solid #058ed9;
+  border-top: 1.75rem solid #1a7667;
   bottom: -1.75rem;
   right: 2rem;
 }
@@ -513,7 +538,7 @@ a a:hover {
 #contact .container .contact-content .content-form label {
   display: inline-block;
   font-size: 1rem;
-  color: #058ed9;
+  color: #1a7667;
   margin-bottom: 0.5rem;
 }
 
@@ -597,7 +622,7 @@ footer .socials a i {
   transition: color 0.4s ease;
 }
 footer .socials a:hover i {
-  color: #058ed9;
+  color: #1a7667;
 }
 footer .footer-bottom {
   background: #77685d;
@@ -650,7 +675,7 @@ footer .footer-bottom span {
   li a:hover,
   li a.active {
     background: none;
-    color: #058ed9;
+    color: #1a7667;
   }
   #check:checked ~ ul {
     left: 0;
@@ -684,7 +709,35 @@ footer .footer-bottom span {
     padding-right: 7rem;
   }
 }
+@media screen and (min-width: 300px) {
+  .h2-sub {
+    font-size: 3rem;
+    color: #f4ebd9;
+    text-shadow: -2px -2px 1px #000;
+    padding: 10px;
+  }
+  .image-group {
+    padding: 20px;
+  }
+}
 /* ----- MEDIA QUERY (mi-perfil) ---- */
+@media screen and (min-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__item:nth-child(3) {
+    grid-column-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-column-start: span 3;
+  }
+  .gallery__item:nth-child(5) {
+    grid-row-start: span 3;
+  }
+  .gallery__item:nth-child(9) {
+    grid-column-start: span 3;
+  }
+}
 @media screen and (min-width: 1024px) {
   .gallery-container {
     grid-template-columns: repeat(5, 1fr);
@@ -698,23 +751,6 @@ footer .footer-bottom span {
   .gallery__item:nth-child(4) {
     grid-column-start: span 3;
     grid-row-start: span 3;
-  }
-}
-@media screen and (min-width: 768px) {
-  .gallery-container {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  .gallery__item:nth-child(3) {
-    grid-column-start: span 2;
-  }
-  .gallery__item:nth-child(4) {
-    grid-column-start: span 3;
-  }
-  .gallery__item:nth-child(5) {
-    grid-row-start: span 3;
-  }
-  .gallery__item:nth-child(9) {
-    grid-column-start: span 3;
   }
 }
 /* ----- MEDIA QUERY (recetas) ---- */
