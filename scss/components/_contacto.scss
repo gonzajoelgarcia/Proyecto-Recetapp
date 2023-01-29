@@ -20,7 +20,7 @@
   grid-template-columns: 1fr;
 }
 #contact .container .contact-content .content-info {
-  background-color: $celeste;
+  background-color: $verde;
   color: $marron;
   padding: 1.75rem 1rem;
   position: relative;
@@ -32,7 +32,7 @@
   height: 0;
   border-left: 1rem solid transparent;
   border-right: 1rem solid transparent;
-  border-top: 1.75rem solid $celeste;
+  border-top: 1.75rem solid $verde;
   bottom: -1.75rem;
   right: 2rem;
 }
@@ -74,7 +74,7 @@
 #contact .container .contact-content .content-form label {
   display: inline-block;
   font-size: 1rem;
-  color: $celeste;
+  color: $verde;
   margin-bottom: 0.5rem;
 }
 #contact .container .contact-content .content-form input,

@@ -2,52 +2,53 @@
 
 nav {
   background: $marron;
+  position: sticky;
+  top: 0;
   height: 80px;
   width: 100%;
-  .enlace {
-    position: absolute;
-    padding: 10px 20px;
-  }
-  .logo {
-    width: auto;
-    height: 60px;
-  }
-  ul {
-    float: right;
-    margin-right: 20px;
-    margin-bottom: 0px;
-  }
-  ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  ul li a {
-    font-family: "Heebo";
-    color: $crema;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
-  li a.active,
-  li a:hover {
-    background: #96897b;
-    opacity: 85%;
-    transition: 0.5s;
-  }
-  #check {
-    display: none;
-  }
-  .checkbtn {
-    font-size: 30px;
-    color: #fff;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-  }
+  z-index: 1;
 }
-.fa-bars {
+.enlace {
+  position: absolute;
+  padding: 10px 20px;
+}
+.logo {
+  width: auto;
+  height: 60px;
+}
+ul {
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+ul li a {
+  font-family: "Heebo";
+  color: $crema;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+li a.active,
+li a:hover {
+  background: #96897b;
+  opacity: 85%;
+  transition: 0.5s;
+}
+#check {
   display: none;
+}
+.checkbtn {
+  display: none;
+  font-size: 30px;
+  color: $crema;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
 }

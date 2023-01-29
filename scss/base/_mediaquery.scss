@@ -37,7 +37,7 @@
   li a:hover,
   li a.active {
     background: none;
-    color: $celeste;
+    color: $verde;
   }
 
   #check:checked ~ ul {
@@ -127,52 +127,6 @@
     grid-row-start: span 3;
   }
 }
-
-/* ----- MEDIA QUERY (recetas) ---- */
-
-@media (max-width: 1600px) {
-  .site {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(5, 1fr);
-    position: relative;
-    right: 10px;
-  }
-  .card {
-    margin: 15px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .card {
-    margin: 15px;
-  }
-}
-
-@media (max-width: 1014px) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  div .card {
-    margin: 15px;
-  }
-}
-
-@media (max-width: 745px) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(1, 0fr);
-  }
-  div .card {
-    margin: 15px;
-  }
-}
-
 /* ----- MEDIA QUERY (consejos) ---- */
 
 @media screen and (max-width: 1600px) {
@@ -186,9 +140,6 @@
 }
 
 @media screen and (max-width: 1015px) {
-  .card {
-    margin: -15px;
-  }
   .card-site {
     grid-template-columns: repeat(3, 1fr);
   }

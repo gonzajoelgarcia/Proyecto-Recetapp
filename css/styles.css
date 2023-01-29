@@ -33,28 +33,36 @@
 /* ----- HEADER  ---- */
 nav {
   background: #483d3f;
+  position: sticky;
+  top: 0;
   height: 80px;
   width: 100%;
+  z-index: 1;
 }
-nav .enlace {
+
+.enlace {
   position: absolute;
   padding: 10px 20px;
 }
-nav .logo {
+
+.logo {
   width: auto;
   height: 60px;
 }
-nav ul {
+
+ul {
   float: right;
   margin-right: 20px;
   margin-bottom: 0px;
 }
-nav ul li {
+
+ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a {
+
+ul li a {
   font-family: "Heebo";
   color: #f4ebd9;
   font-size: 18px;
@@ -63,25 +71,25 @@ nav ul li a {
   border-radius: 3px;
   text-transform: uppercase;
 }
-nav li a.active,
-nav li a:hover {
+
+li a.active,
+li a:hover {
   background: #96897b;
   opacity: 85%;
   transition: 0.5s;
 }
-nav #check {
+
+#check {
   display: none;
 }
-nav .checkbtn {
+
+.checkbtn {
+  display: none;
   font-size: 30px;
-  color: #fff;
+  color: #f4ebd9;
   float: right;
   line-height: 80px;
   margin-right: 40px;
-}
-
-.fa-bars {
-  display: none;
 }
 
 /* ----INDEX.HTML / MAIN ----- */
@@ -352,8 +360,12 @@ a a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  min-width: 100vh;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  background: url("../img/portada-comida.jpg") center no-repeat;
 }
 
 .card {
@@ -561,7 +573,7 @@ a a:hover {
 
 #contact .container .contact-content .content-form button {
   color: #f4ebd9;
-  background-color: #058ed9;
+  background-color: #1a7667;
   border: 1px solid #483d3f;
   padding: 0.475rem;
   font-size: 1rem;
@@ -754,46 +766,6 @@ footer .footer-bottom span {
     grid-row-start: span 3;
   }
 }
-/* ----- MEDIA QUERY (recetas) ---- */
-@media (max-width: 1600px) {
-  .site {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(5, 1fr);
-    position: relative;
-    right: 10px;
-  }
-  .card {
-    margin: 15px;
-  }
-}
-@media (max-width: 1300px) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .card {
-    margin: 15px;
-  }
-}
-@media (max-width: 1014px) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  div .card {
-    margin: 15px;
-  }
-}
-@media (max-width: 745px) {
-  .site {
-    display: grid;
-    grid-template-columns: repeat(1, 0fr);
-  }
-  div .card {
-    margin: 15px;
-  }
-}
 /* ----- MEDIA QUERY (consejos) ---- */
 @media screen and (max-width: 1600px) {
   .card-site {
@@ -805,9 +777,6 @@ footer .footer-bottom span {
   }
 }
 @media screen and (max-width: 1015px) {
-  .card {
-    margin: -15px;
-  }
   .card-site {
     grid-template-columns: repeat(3, 1fr);
   }
