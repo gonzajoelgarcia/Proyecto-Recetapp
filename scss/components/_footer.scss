@@ -9,11 +9,9 @@ footer {
   padding-top: 40px;
   color: #fff;
   .footer-content {
-    display: flex;
-    align-items: center;
+    @extend %flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
   }
   .footer-content h3 {
     font-size: 1.8rem;

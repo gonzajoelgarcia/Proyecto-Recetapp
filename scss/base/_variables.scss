@@ -5,13 +5,12 @@ $crema: #f4ebd9;
 $blanco: #f3f3f3;
 
 //! LISTAS
-
 $colores: #483d3f, #1a7667, #77685d, #f4ebd9, #f3f3f3;
 
 $font-size: 13px, 14px, 15px, 16px, 18px, 20px, 23px, 30px, 32px;
 
 //! MAPAS
-// KEY - VALUE(VALOR) utilizado en (contacto.html #contact .container .contact-content .content-form button)
+// KEY - VALUE(VALOR) utilizado en (contacto.html #contact .container .contact-content .content-form button).
 
 $button: (
   back-button: #1a7667,
@@ -20,6 +19,7 @@ $button: (
 );
 
 //! EXTENDS
+// usados en _index.scss (.hero) y en _footer.scss (.footer-contect).
 
 %flex {
   display: flex;
@@ -29,8 +29,12 @@ $button: (
 
 //! MIXIN
 
-@mixin flex($flex, $align-item, $text-align) {
+// usado en recetas.css (.site)
+
+@mixin flex($flex, $wrap, $align, $justify, $direction) {
   display: $flex;
-  align-items: $align-item;
-  text-align: $text-align;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
 }

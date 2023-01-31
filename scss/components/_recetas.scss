@@ -1,11 +1,7 @@
 /* ---- RECETAS.HTML / MAIN ---- */
 
 .site {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  @include flex(flex, wrap, center, space-around, row);
   margin-right: auto;
   margin-left: auto;
   width: 100%;

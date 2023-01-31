@@ -24,7 +24,7 @@
   background-color: #483d3f;
 }
 
-.hero {
+footer .footer-content, .hero {
   display: flex;
   align-items: center;
   text-align: center;
@@ -598,11 +598,8 @@ footer {
   color: #fff;
 }
 footer .footer-content {
-  display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
 }
 footer .footer-content h3 {
   font-size: 1.8rem;
